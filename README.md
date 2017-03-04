@@ -13,7 +13,8 @@
 Используемые технологии:
  - bootstrap
  - jquery
- - 
+ - randexp
+ - filesaver
 
 TODO:
 - печать со страницы
