@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Test data generator </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron-narrow.css" rel="stylesheet">
+     <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Tests generator</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container main-container">
+
+      <div class="jumbotron">
+        <form class="form-horizontal" id="tests">
+          <div class="form-group">
+            <label for="inputTestName" class="col-sm-2 control-label">Test name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputTestName" placeholder="Name">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputTestExpression" class="col-sm-2 control-label">Test</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="inputTestExpression" placeholder="regular expression">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="file"/>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group" style="margin-right:0">
+                <button type="submit" class="btn btn-default" id="addTestButton">Add new test</button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" id="phonePattern">Phone</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" id="cityPattern">City</button>
+              </div>
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" id="fioPattern">FIO</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+        
+        <hr />
+
+        <div class="checkbox form-control list-group listBox" id="testListBox">
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+              <button class="btn btn-default" type="submit" id="selectAll"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> select all
+            </button>
+          </div>
+
+          <div class="col-md-4">
+          </div>
+  
+          <div class="col-md-4">
+            <button type="button" class="btn btn-danger" id="buttonDelete">Delete selected</button>
+          </div>
+        </div>
+        
+        <hr />
+        <form id="testGenerator">
+          <div class="input-group">
+            <input type="text" class="form-control" pattern="[0-9]{1,5}" id="testCountVal" placeholder="Enter   count...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button" id="saveButton">save</button>
+              <button class="btn btn-default" type="button" id="showButton">show</button>
+            </span>
+          </div>
+        </form>
+
+        <br />
+
+        <table class="table table-hover" id="resultTable">
+          <thead>
+            <tr class="tableHead">
+            </tr>
+          </thead>
+          <tbody>
+         </tbody>
+       </table>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>Regular expression</h4>
+          <p>A regular expression, regex or regexp (sometimes called a rational expression) is, in theoretical computer science and formal language theory, a sequence of characters that define a search pattern. Usually this pattern is then used by string searching algorithms for "find" or "find and replace" operations on strings.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Template generator</h4>
+          <p>Template Generator or Template generating software is a tool used for developing website, email, and document templates without manually formatting or writing computer programming language code. Such tools provide a GUI (graphical user interface) for design purposes, and produce the source code or formatted structure for websites, emails, or documents.</p>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2017 s_knyazev</p>
+      </footer>
+
+      <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            ...
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/FileSaver.js"></script>
+    <script src="js/randexp.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
